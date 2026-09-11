@@ -31,6 +31,13 @@
   .bio p a { color:var(--accent); text-decoration:none; border-bottom:1px solid var(--border); }
   .bio p a:hover { border-color:var(--accent); }
   .item { padding:13px 0; border-top:1px solid var(--border); font-size:14.5px; line-height:1.6; color:var(--body); }
+  .project { padding:16px 0; border-top:1px solid var(--border); font-size:14.5px; line-height:1.6; color:var(--body); }
+  .project:last-child { border-bottom:1px solid var(--border); }
+  .project img.shot { width:100%; border-radius:12px; border:1px solid var(--border); display:block; margin:0 0 12px; }
+  .project b { display:block; margin-bottom:4px; }
+  .project b a { color:var(--text); font-weight:600; text-decoration:none; }
+  .project b a:hover { color:var(--accent); }
+  .project p { margin:0; }
   .item:last-child { border-bottom:1px solid var(--border); }
   .item b { color:var(--text); font-weight:600; display:block; margin-bottom:2px; }
   .links { font-size:14px; padding:4px 0 10px; }
@@ -56,6 +63,7 @@
     <a class="nav-name" href="#">David Gallardo</a>
     <div class="nav-links">
       <a href="#about">About me</a>
+      <a href="#projects">Projects</a>
       <a href="#interests">Interests</a>
       <a href="#contact">Contact</a>
       <a class="lab" href="https://davizz-dev13.github.io/sharpe-lab/">Sharpe Lab</a>
@@ -79,6 +87,15 @@
       <p>Away from computers: <b>cars</b>. The incurable kind of passion.</p>
     </div>
     <a class="enter" href="https://davizz-dev13.github.io/sharpe-lab/">Go to Sharpe Lab &rarr;</a>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <img class="shot" src="assets/eyes-animation.gif" alt="Animated eyes on a 24x8 LED matrix, running on custom 68000 microcode">
+      <b><a href="https://github.com/Davizz-dev13/m68k-microcode-eyes">m68k-microcode-eyes</a></b>
+      <p>Custom Motorola 68000 microcode for the WepSIM educational processor. A hand-optimized instruction set drives an animated eyes demo on a 24x8 LED matrix, in about 31% fewer clock cycles than the RISC-V reference firmware.</p>
+    </div>
   </section>
 
   <section id="interests">

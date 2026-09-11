@@ -37,7 +37,10 @@
   .project b { display:block; margin-bottom:4px; }
   .project b a { color:var(--text); font-weight:600; text-decoration:none; }
   .project b a:hover { color:var(--accent); }
-  .project p { margin:0; }
+  .project p { margin:0 0 14px; }
+  .project .go { display:inline-block; padding:10px 20px; background:var(--card); color:var(--text); border:1px solid var(--accent); border-radius:12px; font-size:14px; font-weight:600; text-decoration:none; transition:background .15s, transform .05s; }
+  .project .go:hover { background:#1c2330; }
+  .project .go:active { transform:scale(.985); }
   .item:last-child { border-bottom:1px solid var(--border); }
   .item b { color:var(--text); font-weight:600; display:block; margin-bottom:2px; }
   .links { font-size:14px; padding:4px 0 10px; }
@@ -86,15 +89,21 @@
       <p>What pulls me into engineering is data and systems that run efficiently. I'm studying Computer Engineering at UC3M, and my path goes from the metal up: <b>RISC-V assembly</b> and <b>Motorola 68000</b> microinstructions on one end, applied data engineering on the other. My projects span <b>supercar telemetry analysis</b> on Kaggle datasets and <a href="https://davizz-dev13.github.io/sharpe-lab/"><b>Sharpe Lab</b></a>, the custom real-time stock market terminal I built to make investment analysis faster.</p>
       <p>Away from computers: <b>cars</b>. The incurable kind of passion.</p>
     </div>
-    <a class="enter" href="https://davizz-dev13.github.io/sharpe-lab/">Go to Sharpe Lab &rarr;</a>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
+      <img class="shot" src="assets/sharpe-lab.png" alt="Sharpe Lab landing page">
+      <b><a href="https://davizz-dev13.github.io/sharpe-lab/">Sharpe Lab</a></b>
+      <p>My custom real-time stock market terminal, built to make investment analysis faster: quantitative strategies, backtests with costs and live paper trading.</p>
+      <a class="go" href="https://davizz-dev13.github.io/sharpe-lab/">Go to Sharpe Lab &rarr;</a>
+    </div>
+    <div class="project">
       <img class="shot" src="assets/eyes-animation.gif" alt="Animated eyes on a 24x8 LED matrix, running on custom 68000 microcode">
       <b><a href="https://github.com/Davizz-dev13/m68k-microcode-eyes">m68k-microcode-eyes</a></b>
       <p>Custom Motorola 68000 microcode for the WepSIM educational processor. A hand-optimized instruction set drives an animated eyes demo on a 24x8 LED matrix, in about 31% fewer clock cycles than the RISC-V reference firmware.</p>
+      <a class="go" href="https://github.com/Davizz-dev13/m68k-microcode-eyes">Go to repo &rarr;</a>
     </div>
   </section>
 

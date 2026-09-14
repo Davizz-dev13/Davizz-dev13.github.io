@@ -5,57 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>David Gallardo</title>
 <meta name="description" content="David Gallardo - Computer Engineering UC3M. Low-level architecture, LLM systems and quantitative finance. Building Sharpe Lab.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#0d1117; --card:#161b22; --border:#30363d; --text:#e6edf3; --body:#c9d1d9; --muted:#8b949e; --accent:#58a6ff; }
+  :root { --ink:#2a170f; --cream:#f4ecd8; --paper:#faf5e7; --orange:#d96b2a; --yellow:#eab619; --teal:#35858a; --muted:#7a6a58; --line:#d8cdb2; }
   * { box-sizing:border-box; }
   html { scroll-behavior:smooth; }
-  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,'Segoe UI',Roboto,sans-serif; }
-  nav { position:fixed; top:0; left:0; right:0; background:rgba(13,17,23,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); z-index:10; }
-  .nav-in { max-width:720px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
-  .nav-name { font-weight:600; font-size:15px; letter-spacing:.2px; color:var(--text); text-decoration:none; }
-  .nav-links { display:flex; align-items:center; gap:20px; font-size:13px; }
-  .nav-links a { color:var(--muted); text-decoration:none; }
-  .nav-links a:hover { color:var(--text); }
-  .nav-links .lab { color:var(--text); border:1px solid var(--accent); border-radius:9px; padding:5px 12px; font-weight:600; }
-  .nav-links .lab:hover { background:rgba(88,166,255,.08); }
-  main { max-width:720px; margin:0 auto; padding:120px 24px 40px; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family:'DM Sans',sans-serif; }
+  nav { position:fixed; top:0; left:0; right:0; background:var(--cream); border-bottom:3px solid var(--ink); z-index:10; }
+  .nav-in { max-width:760px; margin:0 auto; padding:12px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .nav-name { font-family:'Bungee',sans-serif; font-weight:400; font-size:14px; letter-spacing:.4px; color:var(--ink); text-decoration:none; }
+  .nav-links { display:flex; align-items:center; gap:20px; font-size:13px; font-weight:500; }
+  .nav-links a { color:var(--ink); text-decoration:none; }
+  .nav-links a:hover { color:var(--orange); }
+  .nav-links .lab { color:var(--ink); background:var(--yellow); border:3px solid var(--ink); padding:5px 12px; font-family:'Bungee',sans-serif; font-weight:400; font-size:11px; }
+  .nav-links .lab:hover { background:#f3c437; color:var(--ink); }
+  main { max-width:760px; margin:0 auto; padding:120px 24px 40px; }
   .hero { display:flex; align-items:center; gap:26px; margin:26px 0 30px; }
-  .hero img { width:132px; height:132px; border-radius:20px; border:1px solid var(--border); object-fit:cover; }
-  h1 { margin:0 0 8px; font-size:38px; letter-spacing:-.5px; }
+  .hero img { width:132px; height:132px; border-radius:0; border:3px solid var(--ink); object-fit:cover; }
+  h1 { margin:0 0 8px; font-size:38px; letter-spacing:0; font-family:'Bungee',sans-serif; font-weight:400; }
   .role { color:var(--muted); font-size:14.5px; line-height:1.55; }
-  .statement { font-size:17px; line-height:1.65; color:var(--text); margin:0 0 14px; }
+  .statement { font-family:'Bungee',sans-serif; font-weight:400; font-size:16px; line-height:1.65; color:var(--ink); margin:0 0 14px; }
+  .statement .hl { background:var(--yellow); padding:1px 6px; }
   section { padding:34px 0 6px; }
-  h2 { font-size:12.5px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--muted); margin:0 0 18px; }
-  .bio p { font-size:15px; line-height:1.75; color:var(--body); margin:0 0 15px; }
-  .bio p b { color:var(--text); font-weight:600; }
-  .bio p a { color:var(--accent); text-decoration:none; border-bottom:1px solid var(--border); }
-  .bio p a:hover { border-color:var(--accent); }
-  .item { padding:13px 0; border-top:1px solid var(--border); font-size:14.5px; line-height:1.6; color:var(--body); }
-  .project { padding:16px 0; border-top:1px solid var(--border); font-size:14.5px; line-height:1.6; color:var(--body); }
-  .project:last-child { border-bottom:1px solid var(--border); }
-  .project img.shot { width:100%; border-radius:12px; border:1px solid var(--border); display:block; margin:0 0 12px; }
+  h2 { font-size:13px; font-weight:400; font-family:'Bungee',sans-serif; letter-spacing:1.5px; text-transform:uppercase; color:var(--ink); margin:0 0 18px; display:inline-block; background:var(--yellow); border:3px solid var(--ink); padding:4px 12px; }
+  .bio p { font-size:15px; line-height:1.75; color:var(--ink); margin:0 0 15px; }
+  .bio p b { font-weight:700; }
+  .bio p a { color:var(--orange); text-decoration:none; border-bottom:2px solid var(--orange); }
+  .bio p a:hover { color:var(--ink); border-color:var(--ink); }
+  .item { padding:13px 14px; border:2px solid var(--ink); border-bottom:none; background:var(--paper); font-size:14.5px; line-height:1.6; }
+  .project { padding:16px; border:3px solid var(--ink); background:var(--paper); margin-bottom:16px; font-size:14.5px; line-height:1.6; }
+  .project:last-child { margin-bottom:0; }
+  .project img.shot { width:100%; border-radius:0; border:2px solid var(--ink); display:block; margin:0 0 12px; }
   .project b { display:block; margin-bottom:4px; }
-  .project b a { color:var(--text); font-weight:600; text-decoration:none; }
-  .project b a:hover { color:var(--accent); }
+  .project b a { color:var(--ink); font-family:'Bungee',sans-serif; font-weight:400; font-size:15px; text-decoration:none; }
+  .project b a:hover { color:var(--orange); }
   .project p { margin:0 0 14px; }
-  .project .go { display:inline-block; padding:10px 20px; background:var(--card); color:var(--text); border:1px solid var(--accent); border-radius:12px; font-size:14px; font-weight:600; text-decoration:none; transition:background .15s, transform .05s; }
-  .project .go:hover { background:#1c2330; }
+  .project .go { display:inline-block; padding:9px 18px; background:var(--yellow); color:var(--ink); border:3px solid var(--ink); border-radius:0; font-family:'Bungee',sans-serif; font-size:12px; font-weight:400; text-decoration:none; }
+  .project .go:hover { background:#f3c437; }
   .project .go:active { transform:scale(.985); }
-  .item:last-child { border-bottom:1px solid var(--border); }
-  .item b { color:var(--text); font-weight:600; display:block; margin-bottom:2px; }
+  .item:last-child { border-bottom:2px solid var(--ink); }
+  .item b { font-weight:700; display:block; margin-bottom:2px; }
   .links { font-size:14px; padding:4px 0 10px; }
-  .links a { color:var(--body); text-decoration:none; border-bottom:1px solid var(--border); padding-bottom:1px; }
-  .links a:hover { color:var(--accent); border-color:var(--accent); }
-  .links span { margin:0 12px; color:var(--border); }
+  .links a { color:var(--ink); text-decoration:none; border-bottom:2px solid var(--orange); padding-bottom:1px; font-weight:500; }
+  .links a:hover { color:var(--orange); }
+  .links span { margin:0 12px; color:var(--muted); }
   .loc { color:var(--muted); font-size:13px; }
-  .enter { display:inline-block; margin-top:30px; padding:14px 28px; background:var(--card); color:var(--text); border:1px solid var(--accent); border-radius:12px; font-size:15px; font-weight:600; text-decoration:none; transition:background .15s, transform .05s; }
-  .enter:hover { background:#1c2330; }
+  .enter { display:inline-block; margin-top:30px; padding:14px 28px; background:var(--yellow); color:var(--ink); border:3px solid var(--ink); border-radius:0; font-family:'Bungee',sans-serif; font-size:14px; font-weight:400; text-decoration:none; }
+  .enter:hover { background:#f3c437; }
   .enter:active { transform:scale(.985); }
-  footer { max-width:720px; margin:0 auto; padding:26px 24px 40px; color:var(--muted); font-size:11.5px; border-top:1px solid var(--border); }
+  footer { max-width:760px; margin:0 auto; padding:26px 24px 40px; color:var(--muted); font-size:11.5px; border-top:3px solid var(--ink); }
   @media (max-width:540px) {
     main { padding-top:110px; }
     .hero { flex-direction:column; text-align:center; gap:16px; }
-    h1 { font-size:32px; }
+    h1 { font-size:30px; }
     .nav-name { white-space:nowrap; }
     .nav-in { flex-wrap:wrap; row-gap:8px; padding:10px 24px; }
     .nav-links { width:100%; justify-content:space-between; gap:8px; font-size:12.5px; }
@@ -84,7 +87,7 @@
       <div class="role">Computer Engineering &middot; UC3M<br>Madrid, Spain</div>
     </div>
   </div>
-  <p class="statement">low level architecture, llm models &amp; finance.</p>
+  <p class="statement"><span class="hl">low level architecture, llm models &amp; finance.</span></p>
 
   <section id="about">
     <h2>About me</h2>
